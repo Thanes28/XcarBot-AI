@@ -1,4 +1,4 @@
-# 🚗 XcarBot AI
+<img width="1909" height="947" alt="Full Picture of chatbot" src="https://github.com/user-attachments/assets/c1f2dece-c372-4952-8ef0-8d45d38adcb8" /># 🚗 XcarBot AI
 > An intelligent full-stack AI car assistant that diagnoses problems, gives maintenance advice, and analyzes car images.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -117,7 +117,12 @@ python-dotenv
 
 ## 📸 Screenshots
 
-> _Add your screenshots here after uploading to GitHub_
+<img width="1675" height="857" alt="Prompt 2" src="https://github.com/user-attachments/assets/ef1c6c49-e0a4-4593-8c93-64fb5f9e7040" />
+
+<img width="1909" height="947" alt="Full Picture of chatbot" src="https://github.com/user-attachments/assets/87bbb75a-6693-4afa-acc1-10960d45171a" />
+
+<img width="1697" height="860" alt="Prompt 1" src="https://github.com/user-attachments/assets/495e51aa-bbaa-4b55-96fa-3bf4b985c19d" />
+<img width="1704" height="849" alt="Prompt 3" src="https://github.com/user-attachments/assets/4abd51a2-2677-4dd3-a339-45385d326378" />
 
 ---
 
