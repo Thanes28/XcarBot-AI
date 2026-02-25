@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xcar AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <div class="logo-wrap">🚗</div>
+    <span class="brand">Xcar <span>AI</span></span>
+    <span class="badge">BETA</span>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" onclick="newChat()">Clear Chat</button>
+    <button class="nav-btn">Sign in</button>
+  </div>
+</nav>
+
+<div class="main">
+  <aside class="sidebar">
+    <button class="new-chat-btn" onclick="newChat()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+      New Chat
+    </button>
+    <div class="sidebar-label">Recent</div>
+    <div class="history-item active">🔧 Engine knocking sound</div>
+    <div class="history-item">🚘 Best SUVs under 100k</div>
+    <div class="history-item">⛽ Fuel efficiency tips</div>
+    <div class="history-item">🔋 EV vs Hybrid comparison</div>
+    <div class="history-item">🛞 Tyre pressure guide</div>
+  </aside>
+
+  <div class="chat-area">
+    <div class="messages" id="messages">
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">🚗</div>
+        <h2>Hi, I'm <span>Xcar AI</span></h2>
+        <p>Your intelligent car assistant. Ask me anything about vehicles, maintenance, buying advice, or troubleshooting.</p>
+        <div class="suggestion-grid">
+          <div class="suggestion" onclick="sendSuggestion('What are the best cars to buy in 2025?')">
+            <div class="s-icon">🏆</div>
+            <div class="s-title">Best cars 2025</div>
+            <div class="s-sub">Top picks & rankings</div>
+          </div>
+          <div class="suggestion" onclick="sendSuggestion('My car is making a strange noise, how do I diagnose it?')">
+            <div class="s-icon">🔧</div>
+            <div class="s-title">Diagnose noise</div>
+            <div class="s-sub">Identify car problems</div>
+          </div>
+          <div class="suggestion" onclick="sendSuggestion('How do I improve my car fuel efficiency?')">
+            <div class="s-icon">⛽</div>
+            <div class="s-title">Save on fuel</div>
+            <div class="s-sub">Efficiency tips</div>
+          </div>
+          <div class="suggestion" onclick="sendSuggestion('EV vs Hybrid — which should I buy?')">
+            <div class="s-icon">🔋</div>
+            <div class="s-title">EV vs Hybrid</div>
+            <div class="s-sub">Compare powertrains</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="input-wrap">
+
+        <label for="imageInput" class="attach-btn" title="Upload image">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </label>
+        <input type="file" id="imageInput" accept="image/*" style="display:none" onchange="previewImage(event)"/>
+
+        <div class="input-right">
+          <div id="imagePreview" style="display:none">
+            <img id="previewImg" src="" alt="preview"/>
+            <button onclick="removeImage()" class="remove-img">✕</button>
+          </div>
+          <textarea id="userInput" rows="1" placeholder="Ask anything about cars..." onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+        </div>
+
+        <button class="send-btn" onclick="sendMessage()">
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+        </button>
+
+      </div>
+      <div class="input-hint">Xcar AI can make mistakes. Verify important info.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
